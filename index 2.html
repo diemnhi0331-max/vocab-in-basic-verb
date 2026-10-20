@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Game từ vựng</title>
+<style>
+:root{--bg:#f6f7fb;--card:#fff;--tx:#1d2433;--mu:#6b7385;--pr:#4f46e5;--ok:#16a34a;--no:#dc2626;--bd:#e2e5ee;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12141c;--card:#1c202c;--tx:#eef0f6;--mu:#9aa2b5;--pr:#818cf8;--ok:#4ade80;--no:#f87171;--bd:#2c3242;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#12141c;--card:#1c202c;--tx:#eef0f6;--mu:#9aa2b5;--pr:#818cf8;--ok:#4ade80;--no:#f87171;--bd:#2c3242;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;min-height:100vh}
+#app{max-width:520px;margin:0 auto;padding:20px 16px 40px}
+h1{font-size:24px;margin:8px 0 4px;text-align:center}
+.sub{color:var(--mu);text-align:center;margin:0 0 20px}
+button{font:inherit;color:inherit;cursor:pointer}
+.btn{display:block;width:100%;padding:14px;margin:10px 0;border-radius:12px;border:1px solid var(--bd);background:var(--card);text-align:left;font-size:16px}
+.btn:hover{border-color:var(--pr)}
+.btn.pri{background:var(--pr);color:#fff;border:0;text-align:center;font-weight:600}
+.btn.ok{border-color:var(--ok);background:color-mix(in srgb,var(--ok) 18%,var(--card))}
+.btn.no{border-color:var(--no);background:color-mix(in srgb,var(--no) 18%,var(--card))}
+.top{display:flex;justify-content:space-between;align-items:center;color:var(--mu);font-size:14px;margin-bottom:12px}
+.top button{background:none;border:0;color:var(--pr);font-size:14px}
+.bar{height:6px;background:var(--bd);border-radius:3px;overflow:hidden;margin-bottom:16px}
+.bar i{display:block;height:100%;background:var(--pr)}
+.q{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:28px 18px;text-align:center;font-size:26px;font-weight:700;margin-bottom:12px;min-height:110px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:6px}
+.q small{font-size:15px;font-weight:400;color:var(--mu)}
+input{width:100%;padding:14px;font-size:18px;border-radius:12px;border:1px solid var(--bd);background:var(--card);color:var(--tx)}
+.big{font-size:56px;font-weight:700;text-align:center;margin:20px 0 4px;color:var(--pr)}
+.row{display:flex;gap:10px}.row .btn{text-align:center}
+.fb{min-height:24px;margin:10px 0;text-align:center;font-weight:600}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script>
+const RAW=`matter|có ý nghĩa, quan trọng
+allow|cho phép, tạo điều kiện (cho ai đó làm việc gì)
+benefit|làm lợi cho ai đó/cái gì đó
+harm|gây hại cho ai đó/cái gì đó
+make|khiến cho ai đó (làm việc gì đó)
+suit|phù hợp
+force|ép buộc (ai đó làm gì đó)
+influence|ảnh hưởng
+impact|tác động
+afford|đủ khả năng chi trả, có thể chi trả (cho cái gì)
+provide|cung cấp, mang đến (cho ai đó cái gì đó)
+stay|giữ trạng thái gì
+overcome|vượt qua (một thử thách, khó khăn)
+require|yêu cầu (ai làm gì)
+interest|khiến ai hứng thú
+find|cảm thấy
+throughout|xuyên suốt, ở khắp mọi nơi
+predict|dự đoán
+satisfy|làm ai đó thỏa mãn, hài lòng
+collapse|sụp đổ
+express|bộc lộ, biểu lộ (điều gì đó)
+combine|kết hợp
+reveal|hé lộ
+break|phá bỏ, phá vỡ (một việc nào đó)
+involve|bao gồm, có liên quan (đến ai đó, cái gì đó)
+disappoint|làm thất vọng (ai đó)
+grab|chộp lấy (cái gì đó, rất nhanh)
+discourage|làm nản lòng, ngăn cản (ai đó làm gì)
+face sth|đối mặt với
+switch|chuyển
+fulfill|hoàn thành, hiện thực hoá
+interrupt|cắt ngang, làm gián đoạn
+ignore|làm ngơ, phớt lờ, bỏ qua
+inform|báo tin
+progress (noun)|sự tiến bộ
+progress (verb)|tiến bộ
+obtain|đạt được, có được
+imitate|bắt chước, sao chép
+handle|xử lý, giải quyết (một vấn đề)
+reverse|đảo ngược (thứ gì đó)
+attribute|quy cho, cho là do (một nguyên nhân nào đó)
+attempt|cố gắng (làm gì đó)
+breed|gây ra, mang tới (việc gì đó tiêu cực)
+bother|làm phiền, làm khó chịu
+stretch|kéo giãn, kéo dài
+indicate|cho thấy, chỉ ra
+alter|điều chỉnh, thay đổi
+leave|duy trì (một trạng thái nào đó)
+distinguish|phân biệt
+regard|coi là, cho là
+wrestle|vật lộn, đấu tranh
+transfer|chuyển, chuyển giao
+empathize|đồng cảm, thấu cảm (với ai)
+analyze|phân tích
+imply|ngụ ý, ám chỉ
+recall|nhớ lại, hồi tưởng
+desire|khao khát
+secure|đạt được, có được
+showcase|thể hiện ra, trưng bày ra (cái gì đó)
+prompt|thúc đẩy (ai đó làm gì đó)
+opt|lựa chọn
+disturb|làm phiền (ai đó), làm ai đó khó chịu
+elevate|nâng cao, đẩy cái gì đó cao lên
+broaden|mở rộng (hiểu biết, tầm nhìn, kinh nghiệm)
+deserve|xứng đáng (với một thứ gì)`;
+const W=RAW.split("\n").map(l=>{const i=l.indexOf("|");const w=l.slice(0,i);return{w,m:l.slice(i+1),k:w.replace(/\(.*?\)/g,"").replace(/ sth$/,"").trim()}});
+const $=document.getElementById("app");
+const shuf=a=>{a=[...a];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+let S={};
+function menu(){
+ $.innerHTML=`<h1>📚 Game từ vựng</h1><p class="sub">${W.length} từ · chọn chế độ chơi</p>
+ <button class="btn" onclick="flash()"><b>🃏 Thẻ ghi nhớ</b><br><span style="color:var(--mu)">Lật thẻ để ôn từ</span></button>
+ <button class="btn" onclick="quiz('en')"><b>🎯 Trắc nghiệm: Anh → Việt</b><br><span style="color:var(--mu)">10 câu, chọn nghĩa đúng</span></button>
+ <button class="btn" onclick="quiz('vi')"><b>🔁 Trắc nghiệm: Việt → Anh</b><br><span style="color:var(--mu)">10 câu, chọn từ đúng</span></button>
+ <button class="btn" onclick="typing()"><b>⌨️ Gõ từ</b><br><span style="color:var(--mu)">Đọc nghĩa, gõ lại từ tiếng Anh</span></button>`;
+}
+function hdr(){return `<div class="top"><button onclick="menu()">← Menu</button><span>${S.i+1}/${S.list.length}${S.score!=null?" · Điểm: "+S.score:""}</span></div><div class="bar"><i style="width:${S.i/S.list.length*100}%"></i></div>`}
+function end(){
+ const p=Math.round(S.score/S.list.length*100);
+ $.innerHTML=`<h1>Hoàn thành!</h1><div class="big">${S.score}/${S.list.length}</div><p class="sub">${p>=80?"Xuất sắc! 🎉":p>=50?"Khá tốt, thử lại nhé 💪":"Cố lên, ôn thêm nhé 📖"}</p>
+ <button class="btn pri" onclick="${S.again}">Chơi lại</button><button class="btn pri" style="background:var(--card);color:var(--tx);border:1px solid var(--bd)" onclick="menu()">Về menu</button>`;
+}
+function flash(){S={list:shuf(W),i:0,show:false};fl()}
+function fl(){
+ if(S.i>=S.list.length){S.score=S.list.length;S.again="flash()";return end()}
+ const c=S.list[S.i];
+ $.innerHTML=hdr()+`<div class="q" onclick="S.show=!S.show;fl()" style="cursor:pointer">${S.show?c.m:c.w}<small>${S.show?"":"Chạm để xem nghĩa"}</small></div>
+ <div class="row"><button class="btn" onclick="S.i=Math.max(0,S.i-1);S.show=false;fl()">← Trước</button><button class="btn pri" onclick="S.i++;S.show=false;fl()">Tiếp →</button></div>`;
+}
+function quiz(d){S={d,list:shuf(W).slice(0,10),i:0,score:0,done:false,again:`quiz('${d}')`};qz()}
+function qz(){
+ if(S.i>=S.list.length)return end();
+ const c=S.list[S.i];
+ const opts=shuf([c,...shuf(W.filter(x=>x!==c)).slice(0,3)]);
+ S.cur=c;
+ $.innerHTML=hdr()+`<div class="q">${S.d=="en"?c.w:c.m}</div>`+opts.map((o,j)=>`<button class="btn" data-j="${j}" onclick="pick(this,${W.indexOf(o)})">${S.d=="en"?o.m:o.w}</button>`).join("");
+}
+function pick(b,idx){
+ if(S.done)return;S.done=true;
+ const ok=W[idx]===S.cur;
+ if(ok){S.score++;b.classList.add("ok")}else{
+  b.classList.add("no");
+  [...$.querySelectorAll(".btn")].forEach(x=>{if(x.textContent===(S.d=="en"?S.cur.m:S.cur.w))x.classList.add("ok")});
+ }
+ setTimeout(()=>{S.done=false;S.i++;qz()},ok?600:1400);
+}
+function typing(){S={list:shuf(W),i:0,score:0,again:"typing()"};ty()}
+function ty(msg){
+ if(S.i>=S.list.length)return end();
+ const c=S.list[S.i];
+ $.innerHTML=hdr()+`<div class="q">${c.m}<small>Gõ từ tiếng Anh · bắt đầu bằng "${c.k[0]}" · ${c.k.length} chữ cái</small></div>
+ <input id="a" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="Nhập đáp án...">
+ <div class="fb" id="fb"></div><div class="row"><button class="btn" onclick="skip()">Bỏ qua</button><button class="btn pri" onclick="chk()">Kiểm tra</button></div>`;
+ const a=document.getElementById("a");a.focus();a.addEventListener("keydown",e=>{if(e.key==="Enter")chk()});
+}
+function chk(){
+ if(S.lock)return;
+ const c=S.list[S.i],v=document.getElementById("a").value.trim().toLowerCase(),fb=document.getElementById("fb");
+ if(!v)return;
+ if(v===c.k||v===c.w){S.score++;S.lock=1;fb.style.color="var(--ok)";fb.textContent="✅ Chính xác!";setTimeout(()=>{S.lock=0;S.i++;ty()},700)}
+ else{fb.style.color="var(--no)";fb.textContent="❌ Chưa đúng, thử lại hoặc bỏ qua"}
+}
+function skip(){
+ if(S.lock)return;S.lock=1;const c=S.list[S.i],fb=document.getElementById("fb");
+ fb.style.color="var(--no)";fb.textContent="Đáp án: "+c.w;setTimeout(()=>{S.lock=0;S.i++;ty()},1600);
+}
+menu();
+</script>
+</body>
+</html>
